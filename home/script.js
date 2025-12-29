@@ -1,15 +1,21 @@
 const timelineData = [
     {
-        fecha: "Enero 2022",
-        titulo: "Nos conocimos 💫",
-        texto: "Ese fue el comienzo de todo. No sabía que ese día conocería a alguien tan especial que cambiaría mi vida para siempre.",
+        fecha: "30 DE SEPTIEMBRE DE 2022",
+        titulo: "Mis primeras usurpadas",
+        texto: "",
         imagen: "https://st.depositphotos.com/1258191/2733/i/950/depositphotos_27338455-stock-photo-kitty.jpg"
     },
     {
-        fecha: "2R DE SEMPTIEMBRE DE 2022",
-        titulo: "Empezó nuestra relación 💕",
-        texto: "Nuestro primer 'nosotros'. Ese momento en el que todo empezó a tener más sentido y el amor se hizo real.",
+        fecha: "2 DE OCTUBRE",
+        titulo: "Nuestra primer salidad, con final feliz💕",
+        texto: "",
         imagen: "img/relacion.jpg"
+    },
+    {
+        fecha: "7 DE DICIEMBRE DE 2022",
+        titulo: "El casamiento de la Mabeeeel",
+        texto: "Pasar Navidad juntos fue mágico. Luces, abrazos y la calidez de estar con vos.",
+        imagen: "img/navidad.jpg"
     },
     {
         fecha: "25 DE DICIEMBRE DE 2022",
@@ -18,32 +24,38 @@ const timelineData = [
         imagen: "img/navidad.jpg"
     },
     {
-        fecha: "Febrero 2023",
-        titulo: "Tu cumple, mi amor 🎂",
+        fecha: "31 DE DICIEMBRE DE 2022",
+        titulo: "Primer añito nuevo juntos",
         texto: "Celebrar tu día fue una de las cosas más lindas. Ver tu sonrisa me hizo sentir el corazón más lleno que nunca.",
         imagen: "img/cumple_dani.jpg"
     },
     {
-        fecha: "Agosto 2023",
-        titulo: "Nuestro viaje a Buenos Aires ✈️",
-        texto: "El Ateneo, las calles, los cafés… y vos. Cada momento fue perfecto porque fue con vos.",
+        fecha: "15 DE ENERO DE 2023",
+        titulo: "Campamento juntitossss",
+        texto: "Estaba rodeado de tortas la puta madre",
         imagen: "img/viaje.jpg"
     },
     {
-        fecha: "Septiemebre 2023",
-        titulo: "Nuestro 1er año",
+        fecha: "23 DE ENERO 2023",
+        titulo: "Picnic y cartasss",
         texto: "",
         imagen: "img/viaje.jpg"
     },
     {
-        fecha: "14 de Mayo de 2023",
-        titulo: "Nuestro tatuaje juntitos",
+        fecha: "18 DE FEBRERO 2023",
+        titulo: "rico?",
         texto: "",
         imagen: "img/viaje.jpg"
     },
     {
-        fecha: "Noviembre 2023",
-        titulo: "Llegada del Kyrita",
+        fecha: "22 DE FEBRERO DE 2023",
+        titulo: "Tu cumpleanituss",
+        texto: "",
+        imagen: "img/viaje.jpg"
+    },
+    {
+        fecha: "25 DE FEBRERO DE 2023",
+        titulo: "Ultima salidita",
         texto: "",
         imagen: "img/viaje.jpg"
     }
