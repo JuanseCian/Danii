@@ -3,13 +3,19 @@ const timelineData = [
         fecha: "30 DE SEPTIEMBRE DE 2022",
         titulo: "Mis primeras usurpadas",
         texto: "",
-        imagen: "https://st.depositphotos.com/1258191/2733/i/950/depositphotos_27338455-stock-photo-kitty.jpg"
+        imagen: [
+            "img/2022/usurpada.jpeg",
+            "img/2022/usurpada2.jpeg"
+        ]
     },
     {
         fecha: "2 DE OCTUBRE",
-        titulo: "Nuestra primer salidad, con final feliz💕",
+        titulo: "Nuestra primer salida, con final feliz💕",
         texto: "",
-        imagen: "img/relacion.jpg"
+        imagen: [
+            "img/2022/salida.jpeg",
+            "img/2022/salida2.jpeg"
+        ]
     },
     {
         fecha: "7 DE DICIEMBRE DE 2022",
@@ -58,31 +64,98 @@ const timelineData = [
         titulo: "Ultima salidita",
         texto: "",
         imagen: "img/viaje.jpg"
-    }
+    },
+    {
+        fecha: "10 DE MARZO DE 2023",
+        titulo: "Día de SSSSPAAA",
+        texto: "",
+        imagen: "img/viaje.jpg"
+    },
+    {
+        fecha: "21 DE MARZO DE 2023",
+        titulo: "Zeballos y una Hamburguesitasss",
+        texto: "",
+        imagen: "img/viaje.jpg"
+    },
     ];
 
     const timeline = document.getElementById("timeline");
 
     timelineData.forEach((event, index) => {
     const side = index % 2 === 0 ? "left" : "right";
+
+    let imageHTML = "";
+
+    if (Array.isArray(event.imagen)) {
+        imageHTML = `
+        <div class="carousel">
+            ${event.imagen.map((img, i) => `
+            <img src="${img}" class="carousel-img ${i === 0 ? 'active' : ''}">
+            `).join("")}
+            <button class="carousel-btn prev">‹</button>
+            <button class="carousel-btn next">›</button>
+        </div>
+        `;
+    } else {
+        imageHTML = `<img src="${event.imagen}" alt="${event.titulo}">`;
+    }
+
     const eventHTML = `
         <div class="event ${side}">
         <h3>${event.fecha}</h3>
         <div class="event-content">
             <h2>${event.titulo}</h2>
             <p>${event.texto}</p>
-            <img src="${event.imagen}" alt="${event.titulo}">
+            ${imageHTML}
         </div>
         </div>
     `;
+
     timeline.innerHTML += eventHTML;
     });
 
-    // --- Interactividad ---
-    const events = document.querySelectorAll('.event');
-
-    events.forEach(event => {
+    // Abrir/cerrar eventos
+    document.querySelectorAll('.event').forEach(event => {
     event.addEventListener('click', () => {
         event.classList.toggle('active');
     });
     });
+
+    // 🎠 Carrusel
+    document.querySelectorAll('.carousel').forEach(carousel => {
+    const imgs = carousel.querySelectorAll('.carousel-img');
+    const prev = carousel.querySelector('.prev');
+    const next = carousel.querySelector('.next');
+    let index = 0;
+
+    prev.addEventListener('click', e => {
+        e.stopPropagation();
+        imgs[index].classList.remove('active');
+        index = (index - 1 + imgs.length) % imgs.length;
+        imgs[index].classList.add('active');
+    });
+
+    next.addEventListener('click', e => {
+        e.stopPropagation();
+        imgs[index].classList.remove('active');
+        index = (index + 1) % imgs.length;
+        imgs[index].classList.add('active');
+    });
+    });
+
+// 📖 Libro
+const cover = document.getElementById("cover");
+const book = document.getElementById("book");
+const startStory = document.getElementById("startStory");
+const bookWrapper = document.getElementById("book-wrapper");
+
+cover.addEventListener("click", () => {
+    book.classList.add("open");
+});
+
+startStory.addEventListener("click", () => {
+    book.classList.add("fast-flip");
+    setTimeout(() => {
+    bookWrapper.style.display = "none";
+    }, 1200);
+});

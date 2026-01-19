@@ -107,3 +107,323 @@ footer {
     color: white;
     font-size: 1rem;
     }
+
+
+    .book-intro {
+    position: fixed;
+    inset: 0;
+    background: #e7c3c6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.book {
+    width: 320px;
+    height: 440px;
+    position: relative;
+    perspective: 1500px;
+}
+
+.cover, .first-page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    backface-visibility: hidden;
+    transition: transform 1s ease;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.cover {
+    background: #e7c3c6 url('portada.png') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.cover h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    color: #111;
+}
+
+.cover .author {
+    margin-top: 1.5rem;
+    font-style: italic;
+}
+
+.first-page {
+    background: #fff;
+    transform: rotateY(180deg);
+    padding: 2rem;
+    text-align: center;
+}
+
+.first-page h2 {
+    margin-top: 4rem;
+    font-size: 1.4rem;
+}
+
+.first-page button {
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    background: #ff758c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Animaciones */
+.book.open .cover {
+    transform: rotateY(-180deg);
+}
+
+.book.open .first-page {
+    transform: rotateY(0deg);
+}
+
+.book.flip-many {
+    animation: flipFast 1.5s ease forwards;
+}
+
+@keyframes flipFast {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(-720deg); }
+}
+
+#book-wrapper {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #f7b2b7, #f4a1b3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.book {
+    width: 380px;
+    height: 560px;
+    perspective: 2000px;
+    position: relative;
+}
+
+/* animación caída */
+.book.drop {
+    animation: dropIn 1.2s ease-out forwards;
+}
+
+@keyframes dropIn {
+    from {
+        transform: translateY(-100vh) rotate(-5deg);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: #fff;
+    transform-origin: left;
+    transition: transform 1s ease;
+    backface-visibility: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+/* PORTADA */
+.cover {
+    background-image: url("img/1.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover-content {
+    text-align: center;
+    background: rgba(255,255,255,0.75);
+    padding: 2rem 2rem;
+    border-radius: 8px;
+    margin-bottom: 350px;
+}
+
+.cover h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+.cover hr {
+    width: 80%;
+    border: none;
+    height: 2px;
+    background: #e87b90;
+    margin: 0.8rem auto;
+}
+
+.subtitle {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #444;
+}
+
+/* PRIMER HOJA */
+.first-page {
+    background: #fffafc;
+    transform: rotateY(180deg);
+    text-align: center;
+    padding: 3.5rem 2.5rem;
+}
+
+.first-page h2 {
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+    color: #444;
+}
+
+.first-page button {
+    padding: 0.8rem 1.8rem;
+    border: none;
+    border-radius: 25px;
+    background: #ff758c;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* APERTURA */
+.book.open .cover {
+    transform: rotateY(-180deg);
+}
+
+.book.open .first-page {
+    transform: rotateY(0deg);
+}
+
+/* HOJEO FINAL */
+.book.fast-flip {
+    animation: flipMany 1.2s ease forwards;
+}
+
+@keyframes flipMany {
+    to {
+        transform: rotateY(-720deg) scale(0.85);
+        opacity: 0;
+    }
+}
+
+/*Para el celu*/
+/* ===================== */
+/* 📱 RESPONSIVE MOBILE */
+/* ===================== */
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .timeline::after {
+        left: 20px;
+    }
+
+    .event {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 50px;
+        text-align: left !important;
+    }
+
+    .event::after {
+        left: 10px !important;
+    }
+
+    .event h3 {
+        font-size: 0.9rem;
+    }
+
+    .event-content {
+        padding: 1rem;
+    }
+
+    /* 📖 LIBRO EN CELULAR */
+    .book {
+        width: 90vw;
+        height: 65vh;
+    }
+
+    .cover h1 {
+        font-size: 1.6rem;
+    }
+
+    .subtitle {
+        font-size: 0.8rem;
+    }
+
+    .cover-content {
+        padding: 1.2rem;
+        margin-bottom: 250px;
+    }
+
+    .first-page {
+        padding: 2rem 1.5rem;
+    }
+
+    .first-page h2 {
+        font-size: 1.3rem;
+    }
+
+    .first-page button {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.4rem;
+    }
+}
+
+/* 🎠 CARRUSEL */
+.carousel {
+    position: relative;
+    margin-top: 0.8rem;
+}
+
+.carousel-img {
+    display: none;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-img.active {
+    display: block;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.2rem 0.6rem;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.carousel-btn.prev { left: 8px; }
+.carousel-btn.next { right: 8px; }
+
