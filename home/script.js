@@ -20,8 +20,12 @@ const timelineData = [
     {
         fecha: "7 DE DICIEMBRE DE 2022",
         titulo: "El casamiento de la Mabeeeel",
-        texto: "Pasar Navidad juntos fue mágico. Luces, abrazos y la calidez de estar con vos.",
-        imagen: "img/navidad.jpg"
+        texto: "",
+        imagen: [
+            "img/2022/casamiento_mabel1.jpeg",
+            "img/2022/casamiento_mabel2.jpeg",
+            "img/2022/casamiento_mabel3.jpeg"
+        ]
     },
     {
         fecha: "25 DE DICIEMBRE DE 2022",
@@ -32,8 +36,12 @@ const timelineData = [
     {
         fecha: "31 DE DICIEMBRE DE 2022",
         titulo: "Primer añito nuevo juntos",
-        texto: "Celebrar tu día fue una de las cosas más lindas. Ver tu sonrisa me hizo sentir el corazón más lleno que nunca.",
-        imagen: "img/cumple_dani.jpg"
+        texto: "",
+        imagen: [
+            "img/2022/anio_nuevo1.jpeg",
+            "img/2022/anio_nuevo2.jpeg",
+            "img/2022/anio_nuevo3.jpeg"
+        ]
     },
     {
         fecha: "15 DE ENERO DE 2023",
