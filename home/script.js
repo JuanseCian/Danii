@@ -31,7 +31,7 @@ const timelineData = [
         fecha: "25 DE DICIEMBRE DE 2022",
         titulo: "Nuestra primera Navidad 🎄",
         texto: "Pasar Navidad juntos fue mágico. Luces, abrazos y la calidez de estar con vos.",
-        imagen: "img/navidad.jpg"
+        imagen: "img/2022/navidad.jpg"
     },
     {
         fecha: "31 DE DICIEMBRE DE 2022",
@@ -47,25 +47,31 @@ const timelineData = [
         fecha: "15 DE ENERO DE 2023",
         titulo: "Campamento juntitossss",
         texto: "Estaba rodeado de tortas la puta madre",
-        imagen: "img/viaje.jpg"
+        imagen: "img/2023/campamento.jpeg"
     },
     {
         fecha: "23 DE ENERO 2023",
         titulo: "Picnic y cartasss",
         texto: "",
-        imagen: "img/viaje.jpg"
+        imagen: [
+            "img/2023/picnic1.jpeg",
+            "img/2023/picnic2.jpeg"
+        ]
     },
     {
         fecha: "18 DE FEBRERO 2023",
         titulo: "rico?",
         texto: "",
-        imagen: "img/viaje.jpg"
+        imagen: "img/2023/rico.jpeg"
     },
     {
         fecha: "22 DE FEBRERO DE 2023",
         titulo: "Tu cumpleanituss",
         texto: "",
-        imagen: "img/viaje.jpg"
+        imagen: [
+            "img/2023/comple2.jpeg",
+            "img/2023/comple1.jpeg",
+        ]
     },
     {
         fecha: "25 DE FEBRERO DE 2023",
@@ -87,10 +93,21 @@ const timelineData = [
     },
     ];
 
+    
+
     const timeline = document.getElementById("timeline");
+    const fotosLluvia = [
+        "img/especial/01.jpeg",
+        "img/2022/salida.jpeg",
+        "img/2022/casamiento_mabel1.jpeg",
+        "img/2022/anio_nuevo1.jpeg",
+        "img/2023/picnic1.jpeg",
+        "img/2023/rico.jpeg"
+    ];
 
     timelineData.forEach((event, index) => {
     const side = index % 2 === 0 ? "left" : "right";
+
 
     let imageHTML = "";
 
@@ -162,8 +179,36 @@ cover.addEventListener("click", () => {
 });
 
 startStory.addEventListener("click", () => {
+    // Gira libro
     book.classList.add("fast-flip");
+
+    let lluvia = setInterval(crearFotoLluvia, 140);
+
     setTimeout(() => {
-    bookWrapper.style.display = "none";
-    }, 1200);
+        clearInterval(lluvia);
+    }, 3000);
+
+    setTimeout(() => {
+        bookWrapper.style.display = "none";
+    }, 2800);
 });
+
+
+function crearFotoLluvia() {
+    console.log("Creando foto lluvia");
+
+    const img = document.createElement("img");
+    img.src = fotosLluvia[Math.floor(Math.random() * fotosLluvia.length)];
+    img.className = "falling-img";
+
+    img.style.left = Math.random() * 100 + "vw";
+    img.style.animationDuration = 1.8 + Math.random() * 2 + "s";
+    img.style.transform = `rotate(${Math.random() * 40 - 20}deg)`;
+
+    document.body.appendChild(img);
+
+    setTimeout(() => {
+        img.remove();
+    }, 4000);
+}
+
