@@ -455,3 +455,34 @@ transform: translateY(-50%);
 .carousel-btn.prev { left: 8px; }
 .carousel-btn.next { right: 8px; }
 
+#background-slider {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.bg-layer {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 3s ease-in-out;
+    opacity: 0;
+}
+
+.bg-layer.active {
+    opacity: 1;
+}
+
+/* Capa de suavizado */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255,255,255,0.35);
+    z-index: -1;
+}
+
+
+

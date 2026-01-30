@@ -59,6 +59,16 @@ const timelineData = [
         ]
     },
     {
+        fecha: "14 DE FEBRERO 2023",
+        titulo: "Fotitos con la pequeña Adol",
+        texto: "",
+        imagen: [
+            "img/2023/adol1.jpeg",
+            "img/2023/adol2.jpeg",
+            "img/2023/adol3.jpeg"
+        ]
+    },
+    {
         fecha: "18 DE FEBRERO 2023",
         titulo: "rico?",
         texto: "",
@@ -77,19 +87,77 @@ const timelineData = [
         fecha: "25 DE FEBRERO DE 2023",
         titulo: "Ultima salidita",
         texto: "",
-        imagen: "img/viaje.jpg"
+        imagen: "img/2023/salida.jpeg"
     },
     {
         fecha: "10 DE MARZO DE 2023",
         titulo: "Día de SSSSPAAA",
         texto: "",
-        imagen: "img/viaje.jpg"
+        imagen: "img/2023/spa.jpeg"
     },
     {
         fecha: "21 DE MARZO DE 2023",
         titulo: "Zeballos y una Hamburguesitasss",
         texto: "",
-        imagen: "img/viaje.jpg"
+        imagen: "img/2023/zeballos.jpeg"
+    },
+    {
+        fecha: "13 DE MAYO DE 2023",
+        titulo: "Tatuajecillo juntooos",
+        texto: "",
+        imagen: [
+            "img/2023/.jpeg",
+            "img/2023/.jpeg"
+        ]
+    },
+    {
+        fecha: "1O DE JUNIO DE 2023",
+        titulo: "Barcito de Harry y Louis",
+        texto: "",
+        imagen: "img/2023/.jpeg"
+    },
+    {
+        fecha: "19 DE JUNIO DE 2023",
+        titulo: "Fotos re contra randoms",
+        texto: "",
+        imagen: "img/2023/.jpeg"
+    },
+    {
+        fecha: "20 DE JULIO DE 2023",
+        titulo: "Siendo virrrrgos",
+        texto: "",
+        imagen: [
+            "img/2023/virgos1.jpeg",
+            "img/2023/virgos2.jpeg",
+            "img/2023/virgos3.jpeg"
+        ]
+    },
+    {
+        fecha: "22 DE JULIO DE 2023",
+        titulo: "Cineeeee",
+        texto: "",
+        imagen: [
+            "img/2023/cine1.jpeg",
+            "img/2023/cine2.jpeg"
+        ]
+    },
+    {
+        fecha: "21 DE MARZO DE 2023",
+        titulo: "Zeballos y una Hamburguesitasss",
+        texto: "",
+        imagen: "img/2023/.jpeg"
+    },
+    {
+        fecha: "21 DE MARZO DE 2023",
+        titulo: "Zeballos y una Hamburguesitasss",
+        texto: "",
+        imagen: "img/2023/.jpeg"
+    },
+    {
+        fecha: "21 DE MARZO DE 2023",
+        titulo: "Zeballos y una Hamburguesitasss",
+        texto: "",
+        imagen: "img/2023/.jpeg"
     },
     ];
 
@@ -211,4 +279,49 @@ function crearFotoLluvia() {
         img.remove();
     }, 4000);
 }
+
+const fondosScroll = [
+    "img/fondos/paisaje1.jpg",
+    "img/fondos/paisaje2.jpg",
+    "img/fondos/paisaje3.jpg",
+    "img/fondos/paisaje4.jpg",
+    "img/fondos/paisaje5.jpg"
+];
+
+const bgWrapper = document.getElementById("background-slider");
+
+const layer1 = document.createElement("div");
+const layer2 = document.createElement("div");
+
+layer1.className = "bg-layer active";
+layer2.className = "bg-layer";
+
+bgWrapper.appendChild(layer1);
+bgWrapper.appendChild(layer2);
+
+let capaActual = layer1;
+let capaSiguiente = layer2;
+let fondoActual = 0;
+
+capaActual.style.backgroundImage = `url('${fondosScroll[0]}')`;
+
+window.addEventListener("scroll", () => {
+    const scroll = window.scrollY;
+    const altura = document.body.scrollHeight - window.innerHeight;
+    const progreso = scroll / altura;
+
+    const nuevoIndex = Math.floor(progreso * fondosScroll.length);
+
+    if (nuevoIndex !== fondoActual && fondosScroll[nuevoIndex]) {
+        fondoActual = nuevoIndex;
+
+        capaSiguiente.style.backgroundImage = `url('${fondosScroll[nuevoIndex]}')`;
+        capaSiguiente.classList.add("active");
+        capaActual.classList.remove("active");
+
+        const temp = capaActual;
+        capaActual = capaSiguiente;
+        capaSiguiente = temp;
+    }
+});
 
