@@ -149,9 +149,9 @@ const timelineData = [
         titulo: "Viajecito a Buenos Aires",
         texto: "",
         imagen: [
-            "img/2023/.jpeg",
-            "img/2023/.jpeg",
-            "img/2023/.jpeg"
+            "img/2023/bsas1.jpeg",
+            "img/2023/bsas2.jpeg",
+            "img/2023/bsas3.jpeg"
         ]
     },
     {
@@ -167,127 +167,293 @@ const timelineData = [
         fecha: "3 DE NOVIEMBRE DE 2023",
         titulo: "Holis soy Kyra, llegué",
         texto: "",
-        imagen: "img/2023/.jpeg"
+        imagen: [
+            "img/2023/kyra1.jpeg",
+            "img/2023/kyra2.jpeg",
+            "img/2023/kyra3.jpeg"
+        ]
     },
     {
         fecha: "10 DE NOVIEMBRE DE 2023",
         titulo: "Kyrita en el auto",
         texto: "",
-        imagen: "img/2023/.jpeg"
+        imagen: [
+            "img/2023/kyraauto1.jpeg",
+            "img/2023/kyraauto2.jpeg",
+            "img/2023/kyraauto3.jpeg"
+        ]
     },
     {
         fecha: "11 DE NOVIEMBRE DE 2023",
         titulo: "Parque de la costa",
         texto: "(No se si fue tan buen recuerdo)",
-        imagen: "img/2023/.jpeg"
+        imagen: [
+            "img/2023/parque1.jpeg",
+            "img/2023/parque2.jpeg",
+        ]
     },
     {
         fecha: "15 DE NOVIEMBRE DE 2023",
         titulo: "Esta foto me dio ternura",
         texto: "",
-        imagen: "img/2023/.jpeg"
+        imagen: "img/2023/adolcumple.jpeg"
     },
     {
         fecha: "25 DE NOVIEMBRE DE 2023",
         titulo: "AJASJASJASAJSJASJASJASJ",
         texto: "",
-        imagen: "img/2023/.jpeg"
+        imagen: "img/2023/jajaja.jpeg"
     },
     {
         fecha: "26 DE NOVIEMBRE DE 2023",
         titulo: "Vos siendo trola",
         texto: "",
-        imagen: "img/2023/.jpeg"
+        imagen: [
+            "img/2023/trola1.jpeg",
+            "img/2023/trola2.jpeg",
+            "img/2023/trola3.jpeg"
+        ]
     },
     {
         fecha: "25 DE NOVIEMBRE DE 2023",
         titulo: "Naviddddattt",
         texto: "",
-        imagen: "img/2023/.jpeg"
+        imagen: [
+            "img/2023/navidat.jpeg",
+            "img/2023/navidat1.jpeg",
+            "img/2023/navidat2.jpeg"
+        ]
     },
     {
         fecha: "20 DE ENERO DE 2024",
         titulo: "Birrita de con la Rose",
         texto: "",
-        imagen: "img/2024/.jpeg"
+        imagen: "img/2024/rose.png"
     },
     {
         fecha: "21 DE ENERO DE 2024",
         titulo: "ACA PROBAMOS EL COSITO CON CHOCOLATE",
         texto: "",
-        imagen: "img/2024/.jpeg"
+        imagen: "img/2024/coso.jpeg"
     },
     {
         fecha: "21 DE ENERO DE 2024",
         titulo: "Libritoxxx",
         texto: "",
-        imagen: "img/2024/.jpeg"
+        imagen: [
+            "img/2024/librito.png",
+            "img/2024/librito2.png"
+        ]
     },
     {
         fecha: "10 DE FEBRERO DE 2024",
         titulo: "Cumple del Eze",
         texto: "Estabas mamaaadeera",
-        imagen: "img/2024/.jpeg"
+        imagen: [
+            "img/2024/cumple.jpeg",
+            "img/2024/cumple2.jpeg",
+            "img/2024/cumple3.jpeg"
+        ]
     },
     {
         fecha: "14 DE FEBRERO DE 2024",
         titulo: "Anillitoo :´(",
         texto: "",
-        imagen: "img/2024/.jpeg"
+        imagen: "img/2024/anillo.jpeg"
     },
     {
         fecha: "19 DE ABRIL DE 2024",
         titulo: "Casamiento de la Kari y el Seba",
         texto: "",
-        imagen: "img/2024/.jpeg"
+        imagen: "img/2024/casamiento.jpeg"
     },
     {
         fecha: "16 DE JULIO DE 2024",
         titulo: "Fotituuu jiji",
         texto: "",
-        imagen: "img/2024/.jpeg"
+        imagen: "img/2024/fotito.jpeg"
     },
     {
         fecha: "30 DE AGOSTO DE 2024",
         titulo: "Cumpleañito de la Rose",
         texto: "",
-        imagen: "img/2024/.jpeg"
+        imagen: "img/2024/cumplerose.jpeg"
     },
     {
         fecha: "5 DE OCTUBRE DE 2024",
         titulo: "Cumpleañito de la Mabel",
         texto: "",
-        imagen: "img/2024/.jpeg"
+        imagen: [
+            "img/2024/cumplemabel.jpeg",
+            "img/2024/cumplemabel2.jpeg"
+        ]
     },
     {
         fecha: "19 DE OCTUBRE DE 2024",
         titulo: "Barcito con la Rose",
         texto: "(Como nos rompieron el orto)",
-        imagen: "img/2024/.jpeg"
+        imagen: [
+            "img/2024/bar.jpeg",
+            "img/2024/bar2.jpeg"
+        ]
     },
     {
         fecha: "20 DE OCTUBRE DE 2024",
         titulo: "Zoologicooo",
         texto: "",
-        imagen: "img/2024/.jpeg"
+        imagen: [
+            "img/2024/zoologico.jpeg",
+            "img/2024/zoologico2.jpeg"
+        ]
     },
     {
         fecha: "17 DE DICIEMRE DE 2024",
         titulo: "Mi graducion y cenita",
         texto: "",
-        imagen: "img/2024/.jpeg"
+        imagen: "img/2024/graduacion.jpeg"
     },
     {
         fecha: "1 DE ENERO DE 2025",
         titulo: "Vos siendo trola desde el dia uno",
         texto: "y una manga de animales",
-        imagen: "img/2024/.jpeg"
+        imagen: [
+            "img/2025/trola.jpeg",
+            "img/2025/trola2.jpeg",
+            "img/2025/trola3.jpeg",
+            "img/2025/trola4.jpeg"
+        ]
     },
     {
-        fecha: "17 DE DICIEMRE DE 2024",
-        titulo: "Mi graducion y cenita",
+        fecha: "7 DE ENERO DE 2025",
+        titulo: "Gym juntitos",
         texto: "",
-        imagen: "img/2024/.jpeg"
+        imagen: "img/2025/gym.jpeg"
+    },
+    {
+        fecha: "9 DE FEBRERO DE 2025",
+        titulo: "Vos siendo trola de nuevo",
+        texto: "",
+        imagen: [
+            "img/2025/trolasa.jpeg",
+            "img/2025/trolasa2.jpeg"
+        ]
+    },
+    {
+        fecha: "1 DE ENERO DE 2025",
+        titulo: "Vos siendo trola desde el dia uno",
+        texto: "y una manga de animales",
+        imagen: [
+            "img/2025/.jpeg",
+            "img/2025/.jpeg"
+        ]
+    },
+    {
+        fecha: "1 DE ENERO DE 2025",
+        titulo: "Vos siendo trola desde el dia uno",
+        texto: "y una manga de animales",
+        imagen: [
+            "img/2025/.jpeg",
+            "img/2025/.jpeg"
+        ]
+    },
+    {
+        fecha: "1 DE ENERO DE 2025",
+        titulo: "Vos siendo trola desde el dia uno",
+        texto: "y una manga de animales",
+        imagen: [
+            "img/2025/.jpeg",
+            "img/2025/.jpeg"
+        ]
+    },
+    {
+        fecha: "1 DE ENERO DE 2025",
+        titulo: "Vos siendo trola desde el dia uno",
+        texto: "y una manga de animales",
+        imagen: [
+            "img/2025/.jpeg",
+            "img/2025/.jpeg"
+        ]
+    },
+    {
+        fecha: "1 DE ENERO DE 2025",
+        titulo: "Vos siendo trola desde el dia uno",
+        texto: "y una manga de animales",
+        imagen: [
+            "img/2025/.jpeg",
+            "img/2025/.jpeg"
+        ]
+    },
+    {
+        fecha: "1 DE ENERO DE 2025",
+        titulo: "Vos siendo trola desde el dia uno",
+        texto: "y una manga de animales",
+        imagen: [
+            "img/2025/.jpeg",
+            "img/2025/.jpeg"
+        ]
+    },
+    {
+        fecha: "1 DE ENERO DE 2025",
+        titulo: "Vos siendo trola desde el dia uno",
+        texto: "y una manga de animales",
+        imagen: [
+            "img/2025/.jpeg",
+            "img/2025/.jpeg"
+        ]
+    },
+    {
+        fecha: "1 DE ENERO DE 2025",
+        titulo: "Vos siendo trola desde el dia uno",
+        texto: "y una manga de animales",
+        imagen: [
+            "img/2025/.jpeg",
+            "img/2025/.jpeg"
+        ]
+    },
+    {
+        fecha: "1 DE ENERO DE 2025",
+        titulo: "Vos siendo trola desde el dia uno",
+        texto: "y una manga de animales",
+        imagen: [
+            "img/2025/.jpeg",
+            "img/2025/.jpeg"
+        ]
+    },
+    {
+        fecha: "1 DE ENERO DE 2025",
+        titulo: "Vos siendo trola desde el dia uno",
+        texto: "y una manga de animales",
+        imagen: [
+            "img/2025/.jpeg",
+            "img/2025/.jpeg"
+        ]
+    },
+    {
+        fecha: "1 DE ENERO DE 2025",
+        titulo: "Vos siendo trola desde el dia uno",
+        texto: "y una manga de animales",
+        imagen: [
+            "img/2025/.jpeg",
+            "img/2025/.jpeg"
+        ]
+    },
+    {
+        fecha: "1 DE ENERO DE 2025",
+        titulo: "Vos siendo trola desde el dia uno",
+        texto: "y una manga de animales",
+        imagen: [
+            "img/2025/.jpeg",
+            "img/2025/.jpeg"
+        ]
+    },
+    {
+        fecha: "1 DE ENERO DE 2025",
+        titulo: "Vos siendo trola desde el dia uno",
+        texto: "y una manga de animales",
+        imagen: [
+            "img/2025/.jpeg",
+            "img/2025/.jpeg"
+        ]
     },
     ];
 
@@ -297,7 +463,7 @@ const timelineData = [
     const fotosLluvia = [
         "img/especial/01.jpeg",
         "img/2022/salida.jpeg",
-        "img/2023/casamiento_mabel1.jpeg",
+        "img/2022/casamiento_mabel1.jpeg",
         "img/2022/anio_nuevo1.jpeg",
         "img/2023/picnic1.jpeg",
         "img/2023/rico.jpeg"
@@ -415,7 +581,10 @@ const fondosScroll = [
     "img/fondos/paisaje2.jpg",
     "img/fondos/paisaje3.jpg",
     "img/fondos/paisaje4.jpg",
-    "img/fondos/paisaje5.jpg"
+    "img/fondos/paisaje5.jpg",
+    "img/fondos/paisaje6.jpg",
+    "img/fondos/paisaje7.jpg",
+    "img/fondos/paisaje8.jpg"
 ];
 
 const bgWrapper = document.getElementById("background-slider");
