@@ -339,36 +339,39 @@ const timelineData = [
         ]
     },
     {
-        fecha: "1 DE ENERO DE 2025",
-        titulo: "Vos siendo trola desde el dia uno",
-        texto: "y una manga de animales",
+        fecha: "28 DE ABRIL DE 2025",
+        titulo: "Mucho peso muerto",
+        texto: "",
         imagen: [
-            "img/2025/.jpeg",
-            "img/2025/.jpeg"
+            "img/2025/gymjuntos.jpeg",
+            "img/2025/gymjuntos2.jpeg"
+        ]
+    },
+    {
+        fecha: "12 DE JUNIO DE 2025",
+        titulo: "Merienduchi con Adol",
+        texto: "",
+        imagen: [
+            "img/2025/merienda.jpeg",
+            "img/2025/merienda2.jpeg"
         ]
     },
     {
         fecha: "1 DE ENERO DE 2025",
-        titulo: "Vos siendo trola desde el dia uno",
-        texto: "y una manga de animales",
+        titulo: "Los 60 de la Rose y 80 de la Lidia",
+        texto: "",
         imagen: [
-            "img/2025/.jpeg",
-            "img/2025/.jpeg"
+            "img/2025/60_1.jpeg",
+            "img/2025/60_2.jpeg",
+            "img/2025/60_3.jpeg",
+            "img/2025/60_4.jpeg",
+            "img/2025/60_5.jpeg",
         ]
     },
     {
-        fecha: "1 DE ENERO DE 2025",
-        titulo: "Vos siendo trola desde el dia uno",
-        texto: "y una manga de animales",
-        imagen: [
-            "img/2025/.jpeg",
-            "img/2025/.jpeg"
-        ]
-    },
-    {
-        fecha: "1 DE ENERO DE 2025",
-        titulo: "Vos siendo trola desde el dia uno",
-        texto: "y una manga de animales",
+        fecha: "28 DE OCTUBRE DE 2025",
+        titulo: "Mas fotitusss",
+        texto: "",
         imagen: [
             "img/2025/.jpeg",
             "img/2025/.jpeg"
