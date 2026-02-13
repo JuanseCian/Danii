@@ -31,7 +31,7 @@ const timelineData = [
         fecha: "25 DE DICIEMBRE DE 2022",
         titulo: "Nuestra primera Navidad 🎄",
         texto: "Pasar Navidad juntos fue mágico. Luces, abrazos y la calidez de estar con vos.",
-        imagen: "img/2022/navidad.jpg"
+        imagen: "img/2022/navidad.png"
     },
     {
         fecha: "31 DE DICIEMBRE DE 2022",
@@ -268,12 +268,6 @@ const timelineData = [
         imagen: "img/2024/casamiento.jpeg"
     },
     {
-        fecha: "16 DE JULIO DE 2024",
-        titulo: "Fotituuu jiji",
-        texto: "",
-        imagen: "img/2024/fotito.jpeg"
-    },
-    {
         fecha: "30 DE AGOSTO DE 2024",
         titulo: "Cumpleañito de la Rose",
         texto: "",
@@ -335,67 +329,68 @@ const timelineData = [
         texto: "",
         imagen: [
             "img/2025/trolasa.jpeg",
-            "img/2025/trolasa2.jpeg"
+            "img/2025/trolasa2.jpeg",
+            "img/2025/trolasa3.jpeg"
         ]
     },
     {
-        fecha: "1 DE ENERO DE 2025",
-        titulo: "Vos siendo trola desde el dia uno",
-        texto: "y una manga de animales",
+        fecha: "28 DE ABRIL DE 2025",
+        titulo: "Mas Gymmm",
+        texto: "y más y más y másssss",
+        imagen: [
+            "img/2025/gym2.jpeg",
+            "img/2025/gym3.jpeg"
+        ]
+    },
+    {
+        fecha: "22 DE JUNIO DE 2025",
+        titulo: "Meriendita con la Adolfi",
+        texto: "",
+        imagen: [
+            "img/2025/adol.jpeg",
+            "img/2025/adol2.jpeg"
+        ]
+    },
+    {
+        fecha: "20 DE SEPTIEMBRE DE 2025",
+        titulo: "Cumpleañitos de la Rose y la Lidia",
+        texto: "",
+        imagen: [
+            "img/2025/myl.jpeg",
+            "img/2025/myl2.jpeg",
+            "img/2025/myl3.jpeg",
+            "img/2025/myl4.jpeg",
+            "img/2025/myl5.jpeg"
+        ]
+    },
+    {
+        fecha: "28 DE OCTUBRE DE 2025",
+        titulo: "FOTITOS JUNTITUUUUS",
+        texto: "",
         imagen: [
             "img/2025/.jpeg",
             "img/2025/.jpeg"
         ]
     },
     {
-        fecha: "1 DE ENERO DE 2025",
-        titulo: "Vos siendo trola desde el dia uno",
+        fecha: "19 DE NOVIEMBRE DE 2025",
+        titulo: "Mi recibida jiji",
         texto: "y una manga de animales",
         imagen: [
-            "img/2025/.jpeg",
-            "img/2025/.jpeg"
+            "img/2025/recibida.jpeg",
+            "img/2025/recibida2.jpeg"
         ]
     },
     {
-        fecha: "1 DE ENERO DE 2025",
-        titulo: "Vos siendo trola desde el dia uno",
-        texto: "y una manga de animales",
-        imagen: [
-            "img/2025/.jpeg",
-            "img/2025/.jpeg"
-        ]
+        fecha: "21 DE NOVIEMBRE DE 2025",
+        titulo: "Festejito",
+        texto: "",
+        imagen:"img/2025/festejito.jpeg",
     },
     {
-        fecha: "1 DE ENERO DE 2025",
-        titulo: "Vos siendo trola desde el dia uno",
-        texto: "y una manga de animales",
-        imagen: [
-            "img/2025/.jpeg",
-            "img/2025/.jpeg"
-        ]
-    },
-    {
-        fecha: "1 DE ENERO DE 2025",
-        titulo: "Vos siendo trola desde el dia uno",
-        texto: "y una manga de animales",
-        imagen: [
-            "img/2025/.jpeg",
-            "img/2025/.jpeg"
-        ]
-    },
-    {
-        fecha: "1 DE ENERO DE 2025",
-        titulo: "Vos siendo trola desde el dia uno",
-        texto: "y una manga de animales",
-        imagen: [
-            "img/2025/.jpeg",
-            "img/2025/.jpeg"
-        ]
-    },
-    {
-        fecha: "1 DE ENERO DE 2025",
-        titulo: "Vos siendo trola desde el dia uno",
-        texto: "y una manga de animales",
+        fecha: "9 DE DICIEMBRE DE 2025",
+        titulo: "Spaaaa",
+        texto: "QUE BUENA QUE ESTAS PUTA TE AMO",
         imagen: [
             "img/2025/.jpeg",
             "img/2025/.jpeg"
