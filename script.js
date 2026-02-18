@@ -346,10 +346,15 @@ const timelineData = [
         fecha: "22 DE JUNIO DE 2025",
         titulo: "Meriendita con la Adolfi",
         texto: "",
-        imagen: [
-            "img/2025/adol.jpeg",
-            "img/2025/adol2.jpeg"
-        ]
+        imagen: "img/2025/adol.jpeg",
+            
+    },
+    {
+        fecha: "29 DE JUNIO DE 2025",
+        titulo: "Cumple de la Cataaaa",
+        texto: "",
+        imagen: "img/2025/cata.jpeg",
+            
     },
     {
         fecha: "20 DE SEPTIEMBRE DE 2025",
@@ -368,86 +373,64 @@ const timelineData = [
         titulo: "FOTITOS JUNTITUUUUS",
         texto: "",
         imagen: [
-            "img/2025/.jpeg",
-            "img/2025/.jpeg"
+            "img/2025/fotitos.jpeg",
+            "img/2025/fotitos2.jpeg",
+            "img/2025/fotitos3.jpeg",
+            "img/2025/fotitos4.jpeg"
         ]
     },
     {
         fecha: "19 DE NOVIEMBRE DE 2025",
         titulo: "Mi recibida jiji",
-        texto: "y una manga de animales",
+        texto: "",
         imagen: [
             "img/2025/recibida.jpeg",
-            "img/2025/recibida2.jpeg"
+            "img/2025/recibida2.jpeg",
+            "img/2025/recibida3.jpeg",
+            "img/2025/recibida4.jpeg"
         ]
-    },
-    {
-        fecha: "21 DE NOVIEMBRE DE 2025",
-        titulo: "Festejito",
-        texto: "",
-        imagen:"img/2025/festejito.jpeg",
     },
     {
         fecha: "9 DE DICIEMBRE DE 2025",
         titulo: "Spaaaa",
         texto: "QUE BUENA QUE ESTAS PUTA TE AMO",
         imagen: [
-            "img/2025/.jpeg",
-            "img/2025/.jpeg"
+            "img/2025/spa.jpeg",
+            "img/2025/spa2.jpeg",
+            "img/2025/spa3.jpeg",
+            "img/2025/spa4.jpeg",
+            "img/2025/spa5.jpeg",
+            "img/2025/spa6.jpeg"
         ]
     },
     {
-        fecha: "1 DE ENERO DE 2025",
-        titulo: "Vos siendo trola desde el dia uno",
-        texto: "y una manga de animales",
+        fecha: "24 DE ENERO DE 2026",
+        titulo: "Fotitos jiji",
+        texto: "",
         imagen: [
-            "img/2025/.jpeg",
-            "img/2025/.jpeg"
+            "img/2026/fotitos.jpeg",
+            "img/2026/fotitos2.jpeg",
+            "img/2026/fotitos3.jpeg",
+            "img/2026/fotitos4.jpeg"
         ]
     },
     {
-        fecha: "1 DE ENERO DE 2025",
-        titulo: "Vos siendo trola desde el dia uno",
-        texto: "y una manga de animales",
+        fecha: "10 DE FEBRERO DE 2026",
+        titulo: "Cumple del Eze",
+        texto: "Del inala creatina (JODAAAA)",
         imagen: [
-            "img/2025/.jpeg",
-            "img/2025/.jpeg"
+            "img/2026/eze.jpeg",
+            "img/2026/eze2.jpeg"
         ]
     },
     {
-        fecha: "1 DE ENERO DE 2025",
-        titulo: "Vos siendo trola desde el dia uno",
-        texto: "y una manga de animales",
+        fecha: "10 DE FEBRERO DE 2026",
+        titulo: "Y el Cumpleañitus de la Kari",
+        texto: "",
         imagen: [
-            "img/2025/.jpeg",
-            "img/2025/.jpeg"
-        ]
-    },
-    {
-        fecha: "1 DE ENERO DE 2025",
-        titulo: "Vos siendo trola desde el dia uno",
-        texto: "y una manga de animales",
-        imagen: [
-            "img/2025/.jpeg",
-            "img/2025/.jpeg"
-        ]
-    },
-    {
-        fecha: "1 DE ENERO DE 2025",
-        titulo: "Vos siendo trola desde el dia uno",
-        texto: "y una manga de animales",
-        imagen: [
-            "img/2025/.jpeg",
-            "img/2025/.jpeg"
-        ]
-    },
-    {
-        fecha: "1 DE ENERO DE 2025",
-        titulo: "Vos siendo trola desde el dia uno",
-        texto: "y una manga de animales",
-        imagen: [
-            "img/2025/.jpeg",
-            "img/2025/.jpeg"
+            "img/2026/kari.jpeg",
+            "img/2026/kari2.jpeg",
+            "img/2026/kari3.jpeg"
         ]
     },
     ];
@@ -461,7 +444,8 @@ const timelineData = [
         "img/2022/casamiento_mabel1.jpeg",
         "img/2022/anio_nuevo1.jpeg",
         "img/2023/picnic1.jpeg",
-        "img/2023/rico.jpeg"
+        "img/2023/rico.jpeg",
+        "img/2025/fotitos.jpeg"
     ];
 
     timelineData.forEach((event, index) => {
@@ -619,3 +603,135 @@ window.addEventListener("scroll", () => {
     }
 });
 
+//Cierre del Libro
+
+let finalMostrado = false;
+let cerrandoLibro = false;
+let usuarioInteractuo = false;
+
+/* Detectar interacción REAL del usuario */
+["wheel", "touchstart", "keydown"].forEach(evt => {
+    window.addEventListener(evt, () => {
+        usuarioInteractuo = true;
+    }, { once: true });
+});
+
+window.addEventListener("scroll", () => {
+
+    // 🚫 Si todavía no hubo interacción real, no hacemos nada
+    if (!usuarioInteractuo) return;
+
+    const scroll = window.scrollY + window.innerHeight;
+    const alturaTotal = document.documentElement.scrollHeight;
+
+    // margen un poco más amplio para evitar disparos prematuros
+    if (scroll >= alturaTotal - 20 && !finalMostrado) {
+
+        finalMostrado = true;
+
+        // Mostrar mensaje final
+        const mensaje = document.getElementById("final-message");
+        if (mensaje) mensaje.classList.add("visible");
+
+        // Esperar antes de iniciar cierre
+        setTimeout(() => {
+            iniciarCierreLibro();
+        }, 4000); // ← podés cambiar el tiempo acá
+    }
+});
+
+function iniciarCierreLibro() {
+
+    if (cerrandoLibro) return;
+    cerrandoLibro = true;
+
+    // Desvanecer contenido suavemente
+    document.querySelector("header")?.classList.add("fade-out");
+    document.querySelector(".timeline")?.classList.add("fade-out");
+    document.querySelector("footer")?.classList.add("fade-out");
+
+    // Esperar a que termine el fade
+    setTimeout(() => {
+        document.getElementById("ending-book")?.classList.add("show");
+
+        // ahora sí bloquear scroll
+        document.body.style.overflow = "hidden";
+    }, 2000);
+}
+
+/* Forzar inicio arriba */
+window.addEventListener("load", () => {
+    window.scrollTo(0, 0);
+});
+
+/* =============================
+   💖 CORAZONES OPTIMIZADOS
+   ============================= */
+
+const heartLayer = document.getElementById("heart-layer");
+
+const MAX_HEARTS = 35; // controla rendimiento
+const hearts = [];
+
+/* crear pool */
+for(let i=0;i<MAX_HEARTS;i++){
+    const h = document.createElement("div");
+    h.className = "heart";
+    heartLayer.appendChild(h);
+
+    hearts.push({
+        el:h,
+        x:0,
+        y:0,
+        speed:0,
+        drift:0,
+        scale:0,
+        active:false
+    });
+}
+
+/* spawn suave */
+function spawnHeart(h){
+    h.x = Math.random()*window.innerWidth;
+    h.y = window.innerHeight + 40;
+    h.speed = 0.3 + Math.random()*0.9;
+    h.drift = (Math.random()-0.5)*0.6;
+    h.scale = 0.6 + Math.random()*1.4;
+    h.active = true;
+
+    h.el.style.opacity = 0.9;
+    h.el.style.transform = `translate(${h.x}px,${h.y}px) scale(${h.scale}) rotate(45deg)`;
+}
+
+/* loop optimizado */
+let lastSpawn = 0;
+
+function animateHearts(t){
+
+    // generar cada cierto tiempo (no por frame)
+    if(t - lastSpawn > 320){
+        const h = hearts.find(h=>!h.active);
+        if(h) spawnHeart(h);
+        lastSpawn = t;
+    }
+
+    hearts.forEach(h=>{
+        if(!h.active) return;
+
+        h.y -= h.speed*2.2;
+        h.x += h.drift;
+
+        if(h.y < -40){
+            h.active=false;
+            h.el.style.opacity=0;
+            return;
+        }
+
+        h.el.style.transform =
+            `translate(${h.x}px,${h.y}px) scale(${h.scale}) rotate(45deg)`;
+    });
+
+    requestAnimationFrame(animateHearts);
+}
+
+requestAnimationFrame(animateHearts);
