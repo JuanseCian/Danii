@@ -13,8 +13,8 @@ const timelineData = [
         titulo: "Nuestra primer salida, con final feliz💕",
         texto: "",
         imagen: [
-            "img/2022/salida.jpeg",
-            "img/2022/salida2.jpeg"
+            "img/2022/salida.JPEG",
+            "img/2022/salida2.JPEG"
         ]
     },
     {
