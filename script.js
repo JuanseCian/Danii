@@ -439,7 +439,7 @@ const timelineData = [
 
     const timeline = document.getElementById("timeline");
     const fotosLluvia = [
-        "img/especial/01.jpeg",
+        "img/especial/01.jpg",
         "img/2022/salida.jpeg",
         "img/2022/casamiento_mabel1.jpeg",
         "img/2022/anio_nuevo1.jpeg",
